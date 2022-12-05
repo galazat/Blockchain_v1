@@ -78,12 +78,11 @@ func (b Blockchain) isValid() bool {
 }
 
 func main() {
-	// create a new blockchain instance with a mining difficulty of 2
-	blockchain := CreateBlockchain(4)
+	// create a new blockchain instance with a mining difficulty of 6
+	blockchain := CreateBlockchain(6)
 
-	// record transactions on the blockchain for Alice, Bob, and John
-	blockchain.addBlock("Alice", "Bob", 5)
-	blockchain.addBlock("John", "Bob", 2)
+	blockchain.addBlock("Tom", "Sam", 100)
+	blockchain.addBlock("Bob", "Kim", 21)
 
 	// check if the blockchain is valid; expecting true
 	fmt.Printf("Blockchain info\n- difficalty: %v\n- valid: %v\n\n", blockchain.difficulty, blockchain.isValid())
@@ -98,4 +97,4 @@ func main() {
 	}
 }
 
-Date: 29.11.22 Commit author: @galazat. Blockchain realization v1. Proof of Work (PoW)
+//Date: 29.11.22 Commit author: @galazat. Blockchain realization v1. Proof of Work (PoW)
